@@ -1,0 +1,7 @@
+.Funfile.generated.dockerfile
+*.lock
+*.error.log
+*-error.log
+.fun/
+config.coffee
+node_modules/

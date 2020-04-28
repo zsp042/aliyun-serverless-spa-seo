@@ -1,0 +1,11 @@
+{
+  "name": "seo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@e.coding.net:renwu/seo.git",
+  "author": "anyone <anyone@renwu.cool>",
+  "license": "MIT",
+  "dependencies": {
+    "@alicloud/fun": "3.6.9"
+  }
+}

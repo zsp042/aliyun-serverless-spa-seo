@@ -1,0 +1,9 @@
+module.exports = {
+  PREFIX:"https://",
+  URL_PREFIX_LEN:"/2016-08-15/proxy/sls/html/".length,
+  ALLOW_HOST:new Set([
+    'renwu.cool',
+    '6du.space',
+    '6du-space.github.io'
+  ])
+}

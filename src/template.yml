@@ -1,0 +1,29 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: 'Aliyun::Serverless-2018-04-03'
+Resources:
+  sls:
+    Type: 'Aliyun::Serverless::Service'
+    html:
+      Type: 'Aliyun::Serverless::Function'
+      Properties:
+        Handler: index.handler
+        Runtime: nodejs10
+        CodeUri: ./
+        MemorySize: 512
+        Timeout: 120
+        EnvironmentVariables:
+          LD_LIBRARY_PATH: >-
+            /mnt/auto/root/usr/local/lib:/mnt/auto/root/usr/lib:/mnt/auto/root/usr/lib/x86_64-linux-gnu:/mnt/auto/root/usr/lib64:/mnt/auto/root/lib:/mnt/auto/root/lib/x86_64-linux-gnu
+          NODE_PATH: '/mnt/auto/node_modules:/usr/local/lib/node_modules'
+      Events:
+        httpTrigger:
+          Type: HTTP
+          Properties:
+            AuthType: ANONYMOUS
+            Methods:
+              - GET
+              - HEAD
+              - POST
+              - PUT
+    Properties:
+      NasConfig: Auto
